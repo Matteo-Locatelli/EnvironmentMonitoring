@@ -1,0 +1,16 @@
+workspace/Gateway/__pycache__
+workspace/Gateway/.idea
+workspace/AppServer/.idea
+workspace/loranetwork/.idea
+workspace/loranetwork/utils/__pycache__
+workspace/loranetwork/__pycache__
+workspace/loranetwork/enums/__pycache__
+workspace/loranetwork/payloads/__pycache__
+workspace/loranetwork/payloads/info/__pycache__
+workspace/loranetwork/utils/__pycache__
+workspace/loranetwork/threads/__pycache__
+*.pyc
+documentazione/~$lazione Progetto INFO III.docx
+workspace/loranetwork/.idea/.name
+documentazione/~WRL1745.tmp
+documentazione/~WRL2858.tmp

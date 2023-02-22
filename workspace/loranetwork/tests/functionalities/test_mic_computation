@@ -1,0 +1,18 @@
+import base64
+
+from utils.payload_util import compute_data_mic
+
+LoRaWANR1_0 = "LoRaWANR1"
+devEUI = "0ac14aad3e6391a1"
+netSessionKey = "241CC39F85BD9D7C3D0EA2F21F041995"
+appSessionKey = "34825FC676335C0A2FAD87D9187D4A4F"
+appKey = "a772a9b9c627b3a41370b8a8646e6e80"
+akk = bytearray([167, 114, 169, 185, 198, 39, 179, 164, 19, 112, 184, 168, 100, 110, 110, 128])
+
+payloads = ["QBj/XgAACAEB1efWJyP4IQZt84BwnYItoRQB", "QBj/XgAABwEBMBBkiV4q1N23Jv5I3sAE4x3y",
+            "YBj/XgCAAQAAQK1X20rG6SZsDFdeCKDMaCr4vNdaqw==", "gAQDAgEAAAAB4mTU9yQHTwA=",
+            "QBj/XgAABQEBjEq4EVxLInTagRIUG7WsR5Hz"]
+
+phy_payload_byte = data = base64.b64decode("YDzW6QGgAQAAei5cHmCQYh72t2aRhxG8qMta/wrr5o0=")
+print("Expected", phy_payload_byte[-4:].hex())
+print(compute_data_mic(phy_payload_byte, LoRaWANR1_0, 1, 0, 0, netSessionKey, False))
